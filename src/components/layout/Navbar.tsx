@@ -6,7 +6,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown, LogIn } from "lucide-react";
 import { NAV_ITEMS, BRAND, SHOW_STUDENT_REGISTRATION } from "@/lib/constants";
 import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
-import AMSIOLogo from "@/components/ui/AMSIOLogo";
 import { useI18n } from "@/lib/i18n";
 
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
@@ -52,8 +51,21 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="group transition-opacity hover:opacity-90">
-              <AMSIOLogo variant="horizontal" size={36} />
+            <Link href="/" className="group transition-opacity hover:opacity-90 flex items-center gap-3">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={`${BASE}/images/logo/Amsio_app_icon(_square_with_rounded_corners).png`}
+                alt="AMSIO International"
+                className="w-9 h-9 object-contain"
+              />
+              <div>
+                <div className="text-white font-bold text-xl font-[family-name:var(--font-display)] leading-none tracking-wide">
+                  AMSIO
+                </div>
+                <div className="text-white/55 text-[10px] tracking-[0.2em] uppercase leading-none mt-0.5">
+                  International
+                </div>
+              </div>
             </Link>
 
             {/* Desktop Nav */}

@@ -272,7 +272,7 @@ export const NAV_ITEMS = [
   },
   { label: "Grand Finals", href: "/grand-finals" },
   { label: "Results", href: "/results" },
-  // { label: "News", href: "/news" }, // hidden (partner-only phase) — re-enable later
+  { label: "News", href: "/news" },
 ] as const;
 
 // ── Launch phase ───────────────────────────────────────────────────────────
