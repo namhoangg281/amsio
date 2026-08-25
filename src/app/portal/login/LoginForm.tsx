@@ -85,7 +85,7 @@ export default function LoginForm() {
         .maybeSingle();
 
       if (adminProfile) {
-        window.location.href = `${BASE}/portal/admin`;
+        window.location.href = `${BASE}/admin`;
         return;
       }
 
@@ -116,9 +116,9 @@ export default function LoginForm() {
         return;
       }
 
-      const isAdmin = appRoles.some(r => ['super_admin', 'center_admin', 'ops_staff', 'exam_manager', 'finance_staff'].includes(r));
+      const isAdmin = appRoles.some(r => ['amsio_admin', 'super_admin', 'center_admin', 'ops_staff', 'exam_manager', 'finance_staff'].includes(r));
       if (isAdmin) {
-        window.location.href = `${BASE}/portal/admin`;
+        window.location.href = `${BASE}/admin`;
         return;
       }
 
@@ -137,7 +137,7 @@ export default function LoginForm() {
       } else if (isPartner) {
         window.location.href = `${BASE}/portal/partner`;
       } else {
-        window.location.href = `${BASE}/portal/dashboard`;
+        window.location.href = `${BASE}/portal/student`;
       }
     } catch {
       setError(t.common.error);
