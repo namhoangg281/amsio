@@ -132,7 +132,7 @@ export default function Navbar() {
 
               {/* Sign In */}
               <Link
-                href="/cms/login"
+                href="/portal/login"
                 className="hidden md:flex items-center gap-1.5 px-4 py-2 text-sm font-semibold text-white/90 hover:text-white border border-white/25 hover:border-white/50 rounded-full transition-all"
               >
                 <LogIn className="w-3.5 h-3.5" />
@@ -205,7 +205,7 @@ export default function Navbar() {
 
                 {/* Sign In */}
                 <Link
-                  href="/cms/login"
+                  href="/portal/login"
                   onClick={() => setMobileOpen(false)}
                   className="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-xl border border-white/25 text-white/90 font-semibold text-sm hover:bg-white/10 transition-colors"
                 >
