@@ -73,9 +73,10 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
   const appRoles: string[] = (jwtRoles && jwtRoles.length > 0) ? jwtRoles : (storedRoles ?? []);
   const metaRole = (user.user_metadata?.['role'] as string | undefined) ?? '';
 
-  const isAdmin = appRoles.some(r =>
-    ['amsio_admin', 'marketing_staff', 'super_admin', 'ops_staff'].includes(r)
+  const isHqAdmin = appRoles.some(r =>
+    ['amsio_admin', 'center_admin', 'super_admin', 'ops_staff'].includes(r)
   );
+  const isCmsStaff = appRoles.includes('marketing_staff');
   const isSchool =
     appRoles.some(r => ['school', 'school_coordinator', 'institution_admin', 'school_admin'].includes(r)) ||
     metaRole === 'school_coordinator';
@@ -83,8 +84,10 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     appRoles.some(r => ['partner', 'national_partner', 'national_partner_admin'].includes(r)) ||
     metaRole === 'partner' || metaRole === 'national_partner';
 
-  if (isAdmin) {
+  if (isHqAdmin) {
     return redirectTo(`${BASE}/admin`);
+  } else if (isCmsStaff) {
+    return redirectTo(`${BASE}/cms`);
   } else if (isSchool) {
     return redirectTo(`${BASE}/portal/school`);
   } else if (isPartner) {
