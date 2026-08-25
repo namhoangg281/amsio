@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#003399"/>
+      <stop offset="100%" stop-color="#001a4d"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#DAA520"/>
+    </linearGradient>
+    <linearGradient id="shadow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#b0c4de" stop-opacity="0.7"/>
+    </linearGradient>
+  </defs>
+  <!-- Circle background -->
+  <circle cx="256" cy="256" r="250" fill="url(#bg)"/>
+  <!-- Stylized "A" letter -->
+  <path d="M256 80 L155 380 L185 380 L205 320 L307 320 L327 380 L357 380 Z M256 140 L295 300 L217 300 Z" fill="white"/>
+  <!-- Shadow on right side of A -->
+  <path d="M256 80 L357 380 L327 380 L307 320 L256 320 L256 140 L295 300 L307 320 L327 380 L357 380 Z" fill="url(#shadow)" opacity="0.3"/>
+  <!-- Gold laurel wreath - left branch -->
+  <path d="M130 400 Q160 370 190 385 Q170 395 160 410 Q140 395 130 400 Z
+           M145 415 Q175 390 205 400 Q185 415 175 430 Q155 415 145 415 Z
+           M165 430 Q195 405 225 415 Q205 430 195 445 Q175 435 165 430 Z
+           M190 440 Q220 420 245 435 Q230 445 220 455 Q200 445 190 440 Z" fill="url(#gold)"/>
+  <!-- Gold laurel wreath - right branch -->
+  <path d="M382 400 Q352 370 322 385 Q342 395 352 410 Q372 395 382 400 Z
+           M367 415 Q337 390 307 400 Q327 415 337 430 Q357 415 367 415 Z
+           M347 430 Q317 405 287 415 Q307 430 317 445 Q337 435 347 430 Z
+           M322 440 Q292 420 267 435 Q282 445 292 455 Q312 445 322 440 Z" fill="url(#gold)"/>
+</svg>

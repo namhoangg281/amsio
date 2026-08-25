@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://amsio.org</loc><priority>1.0</priority></url>
+  <url><loc>https://amsio.org/about</loc><priority>0.8</priority></url>
+  <url><loc>https://amsio.org/olympiad</loc><priority>0.9</priority></url>
+  <url><loc>https://amsio.org/countries</loc><priority>0.9</priority></url>
+  <url><loc>https://amsio.org/countries/australia</loc><priority>0.7</priority></url>
+  <url><loc>https://amsio.org/countries/cambodia</loc><priority>0.7</priority></url>
+  <url><loc>https://amsio.org/countries/china</loc><priority>0.7</priority></url>
+  <url><loc>https://amsio.org/countries/india</loc><priority>0.7</priority></url>
+  <url><loc>https://amsio.org/countries/indonesia</loc><priority>0.7</priority></url>
+  <url><loc>https://amsio.org/countries/japan</loc><priority>0.7</priority></url>
+  <url><loc>https://amsio.org/countries/malaysia</loc><priority>0.7</priority></url>
+  <url><loc>https://amsio.org/countries/philippines</loc><priority>0.7</priority></url>
+  <url><loc>https://amsio.org/countries/singapore</loc><priority>0.7</priority></url>
+  <url><loc>https://amsio.org/countries/south-korea</loc><priority>0.7</priority></url>
+  <url><loc>https://amsio.org/countries/thailand</loc><priority>0.7</priority></url>
+  <url><loc>https://amsio.org/grand-finals</loc><priority>0.8</priority></url>
+  <url><loc>https://amsio.org/for-schools</loc><priority>0.8</priority></url>
+  <url><loc>https://amsio.org/results</loc><priority>0.8</priority></url>
+  <url><loc>https://amsio.org/news</loc><priority>0.8</priority></url>
+  <url><loc>https://amsio.org/press</loc><priority>0.6</priority></url>
+  <url><loc>https://amsio.org/contact</loc><priority>0.7</priority></url>
+</urlset>

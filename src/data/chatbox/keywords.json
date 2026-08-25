@@ -1,0 +1,108 @@
+{
+  "version": "2.1",
+  "note": "v2.1 — Synced with AMSIO Handbook 2026-V3 Final. Round names, achievement tiers, countries, host cities, CI format all updated.",
+  "entries": [
+    {
+      "id": "what_is_amsio",
+      "aliases": ["what is amsio", "amsio là gì", "giới thiệu amsio", "about amsio", "tell me about amsio", "amsio international là gì"],
+      "response_vi": "AMSIO International (Alliance for International Mathematics, Science and Computational Intelligence Olympiad) là tổ chức thi học thuật toàn cầu, kết nối học sinh từ khắp nơi trên thế giới trong các môn Toán, Khoa học, Ngôn ngữ và Trí tuệ Tính toán. Triết lý sáng lập: **\"Empowering Global Education Leaders\"** — Trao quyền cho những nhà lãnh đạo giáo dục toàn cầu.",
+      "response_en": "AMSIO International (Alliance for International Mathematics, Science and Computational Intelligence Olympiad) is a global academic competition bringing together students worldwide in Mathematics, Science, Language, and Computational Intelligence. Founding philosophy: **\"Empowering Global Education Leaders.\"**"
+    },
+    {
+      "id": "subjects",
+      "aliases": ["môn thi", "subjects", "môn học", "what subjects", "can thi môn nào", "có những môn gì", "which subjects"],
+      "response_vi": "AMSIO có **4 môn thi**:\n- **Toán học** (Mathematics) — Lớp 1–12, 60–90 phút\n- **Khoa học** (Science) — Lớp 1–12, 60 phút\n- **Ngôn ngữ** (Language) — Tiếng Anh, Trung, Pháp, Nhật và các ngôn ngữ khác, Lớp 1–12\n- **Trí tuệ Tính toán** (Computational Intelligence) — Lớp 3–12+\n\nHọc sinh có thể đăng ký 1 hoặc nhiều môn trong cùng một vòng.",
+      "response_en": "AMSIO has **4 subjects**:\n- **Mathematics** — Grade 1–12, 60–90 min\n- **Science** — Grade 1–12, 60 min\n- **Language** — English, Chinese, French, Japanese & others, Grade 1–12\n- **Computational Intelligence (CI)** — Grade 3–12+\n\nStudents may register for one or more subjects in the same round."
+    },
+    {
+      "id": "rounds",
+      "aliases": ["vòng thi", "rounds", "how many rounds", "mấy vòng", "bao nhiêu vòng", "competition rounds", "stages"],
+      "response_vi": "AMSIO có **3 vòng thi**:\n1. **State Qualifier** (tháng 12/2026): mở cho tất cả học sinh đủ điều kiện\n2. **National Finals** (tháng 3/2027): top thí sinh từ State Qualifier\n3. **Global Round** (tháng 6/2027): thi quốc tế, tổ chức luân phiên giữa các nước\n\nĐịa điểm: Hoa Kỳ (2027), London (2028), Singapore (2029), Seoul (2030).",
+      "response_en": "AMSIO has **3 rounds**:\n1. **State Qualifier** (December 2026): open to all eligible students\n2. **National Finals** (March 2027): top performers from the State Qualifier\n3. **Global Round** (June 2027): world-level competition, rotates annually\n\nHost cities: United States (2027), London (2028), Singapore (2029), Seoul (2030)."
+    },
+    {
+      "id": "registration",
+      "aliases": ["đăng ký", "register", "how to register", "cách đăng ký", "sign up", "đăng ký như thế nào", "registration", "đăng ký thi"],
+      "response_vi": "Có **2 cách đăng ký** tuỳ theo quốc gia của bạn:\n\n**Track 1 — Qua trường học** (nước có Đối tác Quốc gia):\n1. Liên hệ giáo viên / nhà trường\n2. Trường đăng ký tập thể qua Đối tác Quốc gia\n\n**Track 2 — Online trực tiếp** (nước chưa có Đối tác):\n1. Tạo tài khoản tại **amsio.org/portal/register**\n2. Chọn \"Student\" → điền thông tin\n3. Vào Portal → chọn môn thi → gửi đăng ký\n4. Chờ Ban Tổ Chức xác nhận trong Portal\n\n👉 Dù ở quốc gia nào, nên **tạo tài khoản Portal trước** để theo dõi kết quả và chứng chỉ sau này.\n\nXem danh sách 15+ quốc gia có Đối tác: **amsio.org/countries**",
+      "response_en": "There are **2 registration tracks** depending on your country:\n\n**Track 1 — Via School** (countries with a National Partner):\n1. Contact your teacher or school\n2. School registers through the National Partner\n\n**Track 2 — Online Direct** (countries without a National Partner):\n1. Create an account at **amsio.org/portal/register**\n2. Select \"Student\" → fill in your details\n3. In the Portal, select subjects → submit registration\n4. Await confirmation from the Organising Committee in your Portal\n\n👉 Regardless of country, **create a Portal account first** — you'll need it to track results and download certificates.\n\nSee the 15+ countries with National Partners: **amsio.org/countries**"
+    },
+    {
+      "id": "portal",
+      "aliases": ["portal", "login", "sign in", "đăng nhập", "tài khoản", "account", "my account", "student portal", "portal là gì", "portal có gì", "tạo tài khoản"],
+      "response_vi": "**Student Portal** tại amsio.org/portal là trung tâm quản lý kỳ thi của học sinh:\n- **Đăng ký thi** online và theo dõi trạng thái\n- Xem **kết quả** từng vòng thi\n- Tải **chứng chỉ PDF** sau khi kết quả công bố\n- Theo dõi hành trình State Qualifier → National Finals → Global Round\n- **Gửi câu hỏi / thắc mắc** đến Ban Tổ Chức trực tiếp trong Portal\n- Xem trạng thái đủ điều kiện Global Round\n\n🎯 **Tạo tài khoản ngay** để bắt đầu: **amsio.org/portal/register**\nĐã có tài khoản: **amsio.org/portal/login**",
+      "response_en": "**Student Portal** at amsio.org/portal is your competition hub:\n- **Register** for exams and track registration status\n- View **results** for each round\n- Download **PDF certificates** once results are published\n- Track your journey: State Qualifier → National Finals → Global Round\n- **Send questions** directly to the Organising Committee via Portal\n- Check Global Round qualification status\n\n🎯 **Create your account now**: **amsio.org/portal/register**\nAlready have an account: **amsio.org/portal/login**"
+    },
+    {
+      "id": "eligibility",
+      "aliases": ["who can join", "ai được thi", "điều kiện tham gia", "eligible", "eligibility", "requirements", "điều kiện", "có được thi không"],
+      "response_vi": "Điều kiện tham gia:\n- **Toán, Khoa học, Ngôn ngữ:** Học sinh lớp 1–12\n- **Trí tuệ Tính toán (CI):** Lớp 3–12+\n- Không giới hạn quốc tịch\n- Không yêu cầu điểm học bạ tối thiểu — mở cho tất cả học sinh muốn thử thách bản thân",
+      "response_en": "Eligibility:\n- **Math, Science, Language:** Students in Grade 1–12\n- **Computational Intelligence:** Grade 3–12+\n- No nationality restrictions\n- No minimum GPA required — open to all students"
+    },
+    {
+      "id": "achievement_tiers",
+      "aliases": ["achievement tier", "giải thưởng", "awards", "certificate", "chứng chỉ", "distinction", "high merit", "merit", "bằng khen", "xếp loại", "kết quả", "gold award", "silver award", "bronze award", "giải vàng", "giải bạc", "giải đồng"],
+      "response_vi": "Kết quả được phân theo **4 cấp độ** (theo phần trăm trong cùng môn + lớp, trong nước):\n- 🥇 **Gold** — Top 10% — Chứng chỉ Vàng\n- 🥈 **Silver** — 10–30% — Chứng chỉ Bạc\n- 🥉 **Bronze** — 30–60% — Chứng chỉ Đồng\n- 📜 **Certificate of Participation** — 40% còn lại — Chứng chỉ Tham gia\n\n**Tất cả thí sinh hoàn thành bài thi đều nhận chứng chỉ.** Không có \"rớt\".\nChứng chỉ có thể tải về trong **Student Portal**.",
+      "response_en": "Results use **4 Achievement Tiers** (percentile within same subject + grade, within country):\n- 🥇 **Gold** — Top 10%\n- 🥈 **Silver** — Next 20% (top 10–30%)\n- 🥉 **Bronze** — Next 30% (top 30–60%)\n- 📜 **Certificate of Participation** — Remaining 40%\n\n**Every student who completes the exam receives a certificate.** There is no \"fail.\"\nCertificates can be downloaded from the **Student Portal**."
+    },
+    {
+      "id": "scoring",
+      "aliases": ["cách tính điểm", "scoring", "negative marking", "trừ điểm", "điểm số", "how is scored", "marking", "sai trừ điểm không"],
+      "response_vi": "Cách tính điểm:\n- Đúng: **+1 điểm**\n- Sai hoặc bỏ trống: **0 điểm**\n- **Không trừ điểm** khi sai\n\nThí sinh nên trả lời tất cả câu hỏi — không có rủi ro khi đoán.",
+      "response_en": "Scoring:\n- Correct answer: **+1 point**\n- Incorrect or unanswered: **0 points**\n- **No negative marking**\n\nStudents should attempt every question — there is no penalty for guessing."
+    },
+    {
+      "id": "grand_finals",
+      "aliases": ["grand finals", "global round", "chung kết quốc tế", "international finals", "vòng 3", "round 3", "finals", "thi quốc tế", "international grand finals"],
+      "response_vi": "**Global Round (International Finals)** là vòng thi quốc tế đỉnh cao của AMSIO:\n- Tổ chức bởi AMSIO International, địa điểm luân phiên mỗi năm\n- Thời gian: khoảng 1 tuần\n- Chương trình: Khai mạc, Ngày thi, Giao lưu văn hóa, STEM Workshops, Tham quan thành phố, Bế mạc + Trao giải\n- 2 hạng thi: **Premier Division** (HCV/HCB/HCĐ ở National Finals) và **Scholars Division**\n\nLịch: Hoa Kỳ (2027), London (2028), Singapore (2029), Seoul (2030).\nTheo dõi tình trạng đủ điều kiện trong **Student Portal**.",
+      "response_en": "**Global Round (International Finals)** is AMSIO's world-level competition:\n- Organised by AMSIO International, location rotates yearly\n- Duration: approximately one week\n- Programme: Opening Ceremony, Competition Days, Cultural Exchange, STEM Workshops, City Tour, Closing + Awards\n- Two divisions: **Premier Division** (medal holders from National Finals) and **Scholars Division**\n\nSchedule: United States (2027), London (2028), Singapore (2029), Seoul (2030).\nCheck your qualification status in the **Student Portal**."
+    },
+    {
+      "id": "medals_grand_finals",
+      "aliases": ["medals", "huy chương", "medal system", "gold medal", "silver medal", "bronze medal", "giải vàng bạc đồng", "medal grand finals", "global round medals"],
+      "response_vi": "**Huy chương Global Round** (xếp hạng toàn cầu):\n\n**Premier Division** (đã đạt HCV/HCB/HCĐ ở National Finals):\n- 🥇 Huy chương Vàng — Top 10%\n- 🥈 Huy chương Bạc — 10–30%\n- 🥉 Huy chương Đồng — 30–60%\n- 📜 Certificate of Excellence — 40% còn lại\n\n**Scholars Division** (đã nhận Certificate ở National Finals):\n- Cơ cấu tương tự, nhận Certificate of Achievement",
+      "response_en": "**Global Round medals** (global ranking):\n\n**Premier Division** (Gold/Silver/Bronze holders from National Finals):\n- 🥇 Gold Medal — Top 10%\n- 🥈 Silver Medal — Next 20% (top 10–30%)\n- 🥉 Bronze Medal — Next 30% (top 30–60%)\n- 📜 Certificate of Excellence — Remaining 40%\n\n**Scholars Division** (Certificate holders from National Finals):\n- Same structure, awards Certificate of Achievement"
+    },
+    {
+      "id": "countries",
+      "aliases": ["countries", "quốc gia", "which countries", "nước nào", "danh sách nước", "partner countries", "country list", "có nước nào tham gia"],
+      "response_vi": "AMSIO hiện có **15 Đối tác Quốc gia** đang hoạt động:\nCampuchia, Trung Quốc, Indonesia, Nhật Bản, Malaysia, Singapore, Hàn Quốc, Thái Lan, Việt Nam, Canada, Hoa Kỳ, Đức, Ba Lan, Thụy Sĩ, Vương quốc Anh.\n\nNước bạn chưa có trong danh sách? Có thể đăng ký **online trực tiếp** hoặc tìm hiểu cách trở thành Đối tác tại **amsio.org/countries/become-partner**",
+      "response_en": "AMSIO has **15 active National Partners**:\nCambodia, China, Indonesia, Japan, Malaysia, Singapore, South Korea, Thailand, Vietnam, Canada, United States, Germany, Poland, Switzerland, United Kingdom.\n\nYour country not listed? You can still register **online directly**, or explore becoming a National Partner at **amsio.org/countries/become-partner**"
+    },
+    {
+      "id": "format_ci",
+      "aliases": ["ci format", "computational intelligence format", "trí tuệ tính toán thi như thế nào", "ci exam", "coding exam", "ci thi gì"],
+      "response_vi": "**Thi Trí tuệ Tính toán (CI)** — 3 cấp độ:\n\n- **Level 1** (Lớp 3–5): 60 phút lý thuyết — 100% trắc nghiệm (MCQ)\n- **Level 2** (Lớp 6–9): 90 phút MCQ + 120 phút Thực hành\n- **Level 3** (Lớp 10–12+): 90 phút MCQ + 120 phút Thực hành\n\n**Phần Thực hành** (Level 2 và 3), chọn 1 trong 2 track:\n- **Track CS+AI:** Giải bài toán thuật toán + làm việc với AI models\n- **Track Creative Tech:** Xây dựng ứng dụng bằng no-code/low-code\n\nCI cho phép **thi vượt cấp** (đăng ký Level cao hơn lớp thực tế).",
+      "response_en": "**Computational Intelligence (CI) Exam** — 3 levels:\n\n- **Level 1** (Grade 3–5): 60 min theory — 100% MCQ\n- **Level 2** (Grade 6–9): 90 min MCQ + 120 min Practical\n- **Level 3** (Grade 10–12+): 90 min MCQ + 120 min Practical\n\n**Practical component** (Level 2 & 3), choose one track:\n- **Track CS+AI:** Algorithmic problems + AI models\n- **Track Creative Tech:** Build an app using no-code/low-code\n\nCI allows **cross-level registration** (register for a higher level than your actual grade)."
+    },
+    {
+      "id": "preparation",
+      "aliases": ["luyện thi", "preparation", "how to prepare", "chuẩn bị", "coaching", "luyện như thế nào", "học gì", "ôn tập", "sample papers", "đề mẫu"],
+      "response_vi": "AMSIO **không yêu cầu luyện thi** — học tốt chương trình phổ thông là đủ.\n\nTài liệu miễn phí từ AMSIO:\n- Đặc tả kỳ thi (chủ đề, dạng câu, độ khó)\n- Câu hỏi mẫu tại **amsio.org/olympiad/sample-papers**\n- Đề thi cũ (từ kỳ thi thứ 2 trở đi)\n- Mẹo ôn tập tại amsio.org và mạng xã hội AMSIO",
+      "response_en": "AMSIO does **not require coaching** — solid school curriculum knowledge is sufficient.\n\nFree resources:\n- Exam Specifications (topics, question types, difficulty)\n- Sample papers at **amsio.org/olympiad/sample-papers**\n- Past papers (from second cycle onward)\n- Preparation tips at amsio.org and AMSIO social media"
+    },
+    {
+      "id": "certificate_verification",
+      "aliases": ["verify certificate", "xác minh chứng chỉ", "certificate real", "certificate authentic", "qr code", "chứng chỉ thật không"],
+      "response_vi": "Tất cả chứng chỉ AMSIO đều có **mã QR** để xác minh kỹ thuật số.\nScan QR để kiểm tra tính xác thực tại amsio.org.\n\nHọc sinh có thể tải chứng chỉ PDF trong **Student Portal** tại amsio.org/portal.",
+      "response_en": "All AMSIO certificates include a **QR code** for digital verification.\nScan to verify authenticity at amsio.org.\n\nStudents can download PDF certificates directly from the **Student Portal** at amsio.org/portal."
+    },
+    {
+      "id": "contact",
+      "aliases": ["contact", "liên hệ", "email", "how to contact", "liên lạc", "thông tin liên hệ", "hotline", "hỏi btc", "liên hệ ban tổ chức"],
+      "response_vi": "Cách liên hệ Ban Tổ Chức AMSIO nhanh nhất:\n\n**Đã có tài khoản Portal:**\nVào **amsio.org/portal** → mục \"Gửi thông tin đến BTC\" → điền câu hỏi → gửi. BTC sẽ phản hồi trực tiếp trong Portal.\n\n**Chưa có tài khoản:**\nTạo tài khoản miễn phí tại **amsio.org/portal/register** — sau đó gửi câu hỏi trong Portal.\n\n**Thông tin thêm:**\n- Website: **amsio.org**\n- Danh sách đối tác quốc gia: **amsio.org/countries**",
+      "response_en": "How to contact the AMSIO Organising Committee:\n\n**If you have a Portal account:**\nGo to **amsio.org/portal** → \"Send message to Organising Committee\" → submit your question. The team will reply directly in your Portal.\n\n**No account yet?**\nCreate a free account at **amsio.org/portal/register**, then send your message from inside the Portal.\n\n**More information:**\n- Website: **amsio.org**\n- National Partner list: **amsio.org/countries**"
+    },
+    {
+      "id": "philosophy",
+      "aliases": ["philosophy", "triết lý", "measure thinking", "not memory", "why amsio", "tại sao amsio", "empowering", "slogan"],
+      "response_vi": "Triết lý của AMSIO: **\"Empowering Global Education Leaders\"** — Trao quyền cho những nhà lãnh đạo giáo dục toàn cầu.\n\nMọi câu hỏi AMSIO được thiết kế để đo tư duy, không đo trí nhớ — khen thưởng suy luận, nhận dạng mẫu, sáng tạo và khả năng áp dụng kiến thức vào tình huống mới.",
+      "response_en": "AMSIO's philosophy: **\"Empowering Global Education Leaders.\"**\n\nEvery question rewards reasoning, pattern recognition, creative problem-solving, and applying knowledge to new contexts — measuring thinking, not memory."
+    },
+    {
+      "id": "become_partner",
+      "aliases": ["become partner", "trở thành đối tác", "national partner", "đối tác quốc gia", "partner opportunity", "muốn làm đối tác"],
+      "response_vi": "Muốn đưa AMSIO đến quốc gia của bạn?\n\nĐiền form đăng ký trở thành **Đối tác Quốc gia** tại:\n**amsio.org/countries/become-partner**\n\nBan Tổ Chức sẽ liên hệ lại sau khi nhận được đề xuất.",
+      "response_en": "Want to bring AMSIO to your country?\n\nSubmit a partnership application at:\n**amsio.org/countries/become-partner**\n\nThe Organising Committee will follow up after reviewing your submission."
+    }
+  ]
+}
