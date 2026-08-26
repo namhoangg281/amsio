@@ -1748,6 +1748,8 @@ const en = {
     enRequired: 'English (required)',
     saving: 'Saving…',
     publishing: 'Publishing…',
+    saveSuccess: 'Draft saved successfully.',
+    publishSuccess: 'Article published successfully.',
     deleting: 'Deleting…',
     deleteConfirm: 'Delete this article? This cannot be undone.',
     noArticles: 'No articles yet.',

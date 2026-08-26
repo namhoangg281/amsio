@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useI18n } from '@/lib/i18n/context';
 import type { Article, ArticleLocale, ArticleTranslation } from '@/lib/cms/types';
@@ -48,6 +48,7 @@ export default function ArticleEditor({ article }: ArticleEditorProps) {
   const [saving, setSaving] = useState(false);
   const [publishing, setPublishing] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
   function toSlug(text: string): string {
     return text
@@ -70,6 +71,12 @@ export default function ArticleEditor({ article }: ArticleEditorProps) {
   }
 
   const currentTranslation = translations[activeLocale];
+
+  useEffect(() => {
+    if (!successMessage) return;
+    const timer = setTimeout(() => setSuccessMessage(null), 4000);
+    return () => clearTimeout(timer);
+  }, [successMessage]);
 
   async function saveArticle(): Promise<string | null> {
     const body = {
@@ -110,9 +117,12 @@ export default function ArticleEditor({ article }: ArticleEditorProps) {
   async function handleSave() {
     setSaving(true);
     setError(null);
+    setSuccessMessage(null);
     try {
       const savedId = await saveArticle();
+      setSuccessMessage(t.cms.saveSuccess);
       if (savedId && !article) {
+        await new Promise((resolve) => setTimeout(resolve, 900));
         router.push(`/cms/articles/${savedId}/edit`);
       } else {
         router.refresh();
@@ -127,6 +137,7 @@ export default function ArticleEditor({ article }: ArticleEditorProps) {
   async function handlePublish() {
     setPublishing(true);
     setError(null);
+    setSuccessMessage(null);
     try {
       const savedId = await saveArticle();
       if (!savedId) throw new Error('Failed to save before publishing');
@@ -139,7 +150,9 @@ export default function ArticleEditor({ article }: ArticleEditorProps) {
       const data = (await res.json()) as { message?: string };
       if (!res.ok) throw new Error(data.message ?? 'Failed to publish');
 
+      setSuccessMessage(t.cms.publishSuccess);
       if (!article) {
+        await new Promise((resolve) => setTimeout(resolve, 900));
         router.push(`/cms/articles/${savedId}/edit`);
       } else {
         router.refresh();
@@ -306,6 +319,9 @@ export default function ArticleEditor({ article }: ArticleEditorProps) {
         </a>
         {error && (
           <span className="text-red-500 text-sm">{error}</span>
+        )}
+        {successMessage && (
+          <span className="text-green-600 text-sm font-medium">{successMessage}</span>
         )}
       </div>
     </div>
