@@ -11,6 +11,7 @@ import { useI18n } from '@/lib/i18n/context';
 import type { Article, ArticleTranslation } from '@/lib/cms/types';
 import Link from 'next/link';
 import Image from 'next/image';
+import ReactMarkdown from 'react-markdown';
 
 interface ArticleDetailProps {
   article: Article;
@@ -57,12 +58,6 @@ export default function ArticleDetail({ article, backHref }: ArticleDetailProps)
   const a = resolveTranslation(article, locale);
   const label = article.category === 'press' ? t.article.press : t.article.news;
 
-  // Body is authored in a plain textarea. Rendering it as text paragraphs — never as
-  // HTML — keeps staff-authored copy from becoming an injection vector.
-  const paragraphs = a.body
-    .split(/\n\s*\n/)
-    .map((p) => p.trim())
-    .filter(Boolean);
 
   return (
     <>
@@ -117,13 +112,9 @@ export default function ArticleDetail({ article, backHref }: ArticleDetailProps)
         <section className="py-16 md:py-20 bg-white">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <ScrollReveal>
-              {paragraphs.length > 0 ? (
-                <div className="space-y-5">
-                  {paragraphs.map((para, i) => (
-                    <p key={i} className="text-text-secondary leading-relaxed text-base md:text-lg whitespace-pre-line">
-                      {para}
-                    </p>
-                  ))}
+              {a.body.trim() ? (
+                <div className="article-body">
+                  <ReactMarkdown>{a.body}</ReactMarkdown>
                 </div>
               ) : (
                 <p className="text-text-secondary italic">{t.article.emptyBody}</p>

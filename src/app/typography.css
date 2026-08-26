@@ -67,3 +67,20 @@ html:not(.no-type-base) p {
 .type-section { font-size: var(--type-section); letter-spacing: var(--tracking-tight); line-height: var(--leading-heading); }
 .type-overline { font-size: var(--type-overline); letter-spacing: var(--tracking-widest); text-transform: uppercase; font-weight: 600; line-height: var(--leading-normal); }
 .type-caption { font-size: var(--type-caption); letter-spacing: var(--tracking-wide); line-height: var(--leading-normal); }
+
+/* Article body — Markdown rendered via react-markdown */
+.article-body { color: var(--text-secondary); line-height: var(--leading-body); }
+.article-body h1,.article-body h2,.article-body h3,.article-body h4 { color: var(--navy); margin-top: 2em; margin-bottom: 0.5em; }
+.article-body h1 { font-size: var(--type-h2); }
+.article-body h2 { font-size: var(--type-h3); }
+.article-body h3 { font-size: var(--type-h4); }
+.article-body p { margin-bottom: 1.2em; }
+.article-body strong { color: var(--navy); font-weight: 600; }
+.article-body ul,.article-body ol { margin: 1em 0 1.2em 1.5em; }
+.article-body ul { list-style-type: disc; }
+.article-body ol { list-style-type: decimal; }
+.article-body li { margin-bottom: 0.3em; }
+.article-body a { color: var(--orange); text-decoration: underline; }
+.article-body a:hover { opacity: 0.8; }
+.article-body blockquote { border-left: 4px solid var(--orange); padding-left: 1em; margin: 1.5em 0; opacity: 0.8; font-style: italic; }
+.article-body hr { border-color: var(--border-color); margin: 2em 0; }
