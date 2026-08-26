@@ -41,17 +41,31 @@ export default function ArticleEditor({ article }: ArticleEditorProps) {
     () => buildInitialTranslations(article),
   );
   const [slug, setSlug] = useState(article?.slug ?? '');
+  const [slugTouched, setSlugTouched] = useState(!!article?.slug);
   const [category, setCategory] = useState<'news' | 'press'>(article?.category ?? 'news');
   const [featured, setFeatured] = useState(article?.featured ?? false);
   const [coverUrl, setCoverUrl] = useState(article?.cover_url ?? '');
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  function toSlug(text: string): string {
+    return text
+      .toLowerCase()
+      .normalize('NFD').replace(/[̀-ͯ]/g, '')
+      .replace(/[^a-z0-9\s-]/g, '')
+      .trim()
+      .replace(/\s+/g, '-')
+      .replace(/-{2,}/g, '-');
+  }
+
   function updateTranslationField(locale: ArticleLocale, field: keyof ArticleTranslation, value: string) {
     setTranslations((prev) => ({
       ...prev,
       [locale]: { ...prev[locale], [field]: value },
     }));
+    if (locale === 'en' && field === 'title' && !slugTouched) {
+      setSlug(toSlug(value));
+    }
   }
 
   const currentTranslation = translations[activeLocale];
@@ -119,8 +133,8 @@ export default function ArticleEditor({ article }: ArticleEditorProps) {
             <input
               type="text"
               value={slug}
-              onChange={(e) => setSlug(e.target.value)}
-              placeholder="my-article-slug"
+              onChange={(e) => { setSlug(e.target.value); setSlugTouched(true); }}
+              placeholder="auto-generated-from-title"
               className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-navy/30"
             />
           </div>
