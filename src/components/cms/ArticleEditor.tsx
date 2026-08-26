@@ -46,6 +46,7 @@ export default function ArticleEditor({ article }: ArticleEditorProps) {
   const [featured, setFeatured] = useState(article?.featured ?? false);
   const [coverUrl, setCoverUrl] = useState(article?.cover_url ?? '');
   const [saving, setSaving] = useState(false);
+  const [publishing, setPublishing] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   function toSlug(text: string): string {
@@ -70,10 +71,7 @@ export default function ArticleEditor({ article }: ArticleEditorProps) {
 
   const currentTranslation = translations[activeLocale];
 
-  async function handleSave() {
-    setSaving(true);
-    setError(null);
-
+  async function saveArticle(): Promise<string | null> {
     const body = {
       slug,
       category,
@@ -94,20 +92,26 @@ export default function ArticleEditor({ article }: ArticleEditorProps) {
       },
     };
 
+    const url = article ? `/api/v1/cms/articles/${article.id}` : '/api/v1/cms/articles';
+    const method = article ? 'PATCH' : 'POST';
+
+    const res = await fetch(url, {
+      method,
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    });
+
+    const data = (await res.json()) as { data?: { id: string }; message?: string };
+    if (!res.ok) throw new Error(data.message ?? 'Failed to save');
+
+    return article?.id ?? data.data?.id ?? null;
+  }
+
+  async function handleSave() {
+    setSaving(true);
+    setError(null);
     try {
-      const url = article ? `/api/v1/cms/articles/${article.id}` : '/api/v1/cms/articles';
-      const method = article ? 'PATCH' : 'POST';
-
-      const res = await fetch(url, {
-        method,
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(body),
-      });
-
-      const data = (await res.json()) as { data?: { id: string }; message?: string };
-      if (!res.ok) throw new Error(data.message ?? 'Failed to save');
-
-      const savedId = article?.id ?? data.data?.id;
+      const savedId = await saveArticle();
       if (savedId && !article) {
         router.push(`/cms/articles/${savedId}/edit`);
       } else {
@@ -117,6 +121,33 @@ export default function ArticleEditor({ article }: ArticleEditorProps) {
       setError(err instanceof Error ? err.message : 'Save failed');
     } finally {
       setSaving(false);
+    }
+  }
+
+  async function handlePublish() {
+    setPublishing(true);
+    setError(null);
+    try {
+      const savedId = await saveArticle();
+      if (!savedId) throw new Error('Failed to save before publishing');
+
+      const res = await fetch(`/api/v1/cms/articles/${savedId}/publish`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ publish: true }),
+      });
+      const data = (await res.json()) as { message?: string };
+      if (!res.ok) throw new Error(data.message ?? 'Failed to publish');
+
+      if (!article) {
+        router.push(`/cms/articles/${savedId}/edit`);
+      } else {
+        router.refresh();
+      }
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Publish failed');
+    } finally {
+      setPublishing(false);
     }
   }
 
@@ -254,10 +285,18 @@ export default function ArticleEditor({ article }: ArticleEditorProps) {
         <button
           type="button"
           onClick={handleSave}
-          disabled={saving}
-          className="px-6 py-2.5 rounded-lg bg-navy text-white font-semibold text-sm hover:opacity-90 transition-opacity disabled:opacity-60"
+          disabled={saving || publishing}
+          className="px-6 py-2.5 rounded-lg border border-navy text-navy font-semibold text-sm hover:bg-navy/5 transition-colors disabled:opacity-60"
         >
           {saving ? t.cms.saving : t.cms.saveDraft}
+        </button>
+        <button
+          type="button"
+          onClick={handlePublish}
+          disabled={saving || publishing}
+          className="px-6 py-2.5 rounded-lg bg-navy text-white font-semibold text-sm hover:opacity-90 transition-opacity disabled:opacity-60"
+        >
+          {publishing ? t.cms.publishing : t.cms.publish}
         </button>
         <a
           href="/cms/articles"
