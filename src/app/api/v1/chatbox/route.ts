@@ -159,7 +159,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
         },
         body: JSON.stringify({
           model: "claude-haiku-4-5-20251001",
-          max_tokens: 400,
+          max_tokens: 1024,
           system: systemPrompt,
           messages,
         }),
@@ -214,7 +214,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
         body: JSON.stringify({
           system_instruction: { parts: [{ text: systemPrompt }] },
           contents,
-          generationConfig: { maxOutputTokens: 400, temperature: 0.65 },
+          generationConfig: { maxOutputTokens: 1024, temperature: 0.65 },
         }),
       }
     );
