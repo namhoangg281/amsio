@@ -7,7 +7,6 @@ import SubjectCards from "@/components/home/SubjectCards";
 import CompetitionTimeline from "@/components/home/CompetitionTimeline";
 import GrandFinalsShowcase from "@/components/home/GrandFinalsShowcase";
 import AudiencePathways from "@/components/home/AudiencePathways";
-import ExpertReviews from "@/components/home/ExpertReviews";
 import PartnersSection from "@/components/home/PartnersSection";
 // import CTABanner from "@/components/home/CTABanner"; // hidden — section "Learn More"
 import { fetchPublicCollectionItems } from "@/lib/cms/queries";
@@ -29,8 +28,6 @@ export default async function HomePage() {
         <CompetitionTimeline />
         <GrandFinalsShowcase />
         <AudiencePathways />
-        {/* "Voices of Students" replaced with "Expert Reviews and Assessments" (6 experts) */}
-        <ExpertReviews />
         <PartnersSection partners={partnerItems} />
         {/* <CTABanner /> — hidden per requirement (item 16) */}
       </main>
